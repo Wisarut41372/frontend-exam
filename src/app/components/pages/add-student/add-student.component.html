@@ -1,0 +1,43 @@
+
+<div class="login-box" >
+    <h2>เพิ่มนักเรียน</h2>
+    <div class="row">
+       
+    </div>
+    <form [formGroup]="studentForm">
+      <div class="user-box">
+        <input type="text" name="" required formControlName="username">
+        <label>ชื่อผู้ใช้	</label>
+      </div>
+      <div class="user-box">
+        <input type="text" name="" required formControlName="name">
+        <label>ชื่อ</label>
+      </div>
+      <div class="user-box">
+        <input type="text" name="" required formControlName="lastname">
+        <label>นามสกุล</label>
+      </div>
+      <div class="user-box">
+        <input type="text" name="" required formControlName="email">
+        <label>อีเมล</label>
+      </div>
+      <div class="user-box">
+        <input type="text" name="" required formControlName="password">
+        <label>รหัสผ่าน</label>
+      </div>
+      <div class="user-box">
+        <input type="text" name="" required formControlName="status">
+        <label>สถานะ</label>
+      </div>
+     
+      <a   (click)="addStudent()">
+        <span></span>
+        <span></span>
+         <span></span>
+        <span></span>
+        บันทึก
+      </a>
+  
+    </form>
+  </div> 
+  

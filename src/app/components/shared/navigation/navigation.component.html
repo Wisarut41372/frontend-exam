@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container">
+      <a class="navbar-brand" routerLink="/">Online-Exam</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto">
+          <li class="dropdown-item dropdown" *ngIf="isLoggedIn">
+            <a class="dropdown-item " id="dropdownId" data-bs-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" routerLink="/">หน้าหลัก</a>
+         
+          <li class="dropdown-item dropdown" *ngIf="isLoggedIn">
+            <a class="dropdown-item dropdown-toggle" id="dropdownId" data-bs-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">จัดการนักเรียน</a>
+          <div class="dropdown-menu" aria-labelledby="dropdownId">
+          <li class="dropdown-item" *ngIf="isLoggedIn">
+            <a class="nav-link" routerLink="/student">นักเรียน</a>
+            
+          </li>
+         
+        </div>
+          <li class="dropdown-item dropdown" *ngIf="isLoggedIn">
+            <a class="dropdown-item dropdown-toggle" id="dropdownId" data-bs-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">จัดการข้อสอบ</a>
+          <div class="dropdown-menu" aria-labelledby="dropdownId">
+          <li class="dropdown-item" *ngIf="isLoggedIn">
+            <a class="nav-link" routerLink="/exam">ข้อสอบ</a>
+            
+          </li>
+          <li class="dropdown-item" *ngIf="isLoggedIn">
+            <a class="nav-link" routerLink="/question">คำถาม</a>
+          </li>
+        </div>
+          <li class="dropdown-item" *ngIf="!isLoggedIn">
+            <a class="nav-link" routerLink="/login">Login</a>
+          </li>
+         <li class="dropdown-item" *ngIf="!isLoggedIn">
+            <a class="nav-link" routerLink="/register">Register</a>
+          </li>
+          <li class="dropdown-item dropdown" *ngIf="isLoggedIn">
+            <a class="dropdown-item dropdown-toggle" id="dropdownId" data-bs-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">{{ currentUser.name }}</a>
+            <div class="dropdown-menu" aria-labelledby="dropdownId">
+                <li class="dropdown-item">
+                    <a class="nav-link" href="#">โปรไฟล์</a>
+                   
+                  </li>
+                  <li class="dropdown-item" *ngIf="isLoggedIn">
+                    <a class="nav-link" routerLink="/" (click)="logout()">ล็อคเอ้าค์</a>
+                  </li>
+            </div>
+        </li>
+     
+        </ul>
+      </div>
+    </div>
+  </nav>

@@ -1,0 +1,39 @@
+
+<div class="login-box" >
+  <h2>เพิ่มข้อสอบ</h2>
+  <div class="row">
+     
+  </div>
+  <form [formGroup]="examForm">
+    <div class="user-box">
+  
+      <input type="text" name="" required formControlName="title">
+      <label>ชื่อ	</label>
+    </div>
+    <div class="user-box">
+      <input type="text" name="" required formControlName="subject">
+      <label>วิชา</label>
+    </div>
+    <div class="user-box">
+      <input type="text" name="" required formControlName="chapter">
+      <label>บทที่</label>
+    </div>
+    <div class="user-box">
+      <input type="text" name="" required formControlName="score">
+      <label>จำนวนข้อ</label>
+    </div>
+    <div class="user-box">
+      <input type="text" name="" required formControlName="passed">
+      <label>จำนวนข้อที่ผ่าน</label>
+    </div>
+   
+    <a  (click)="addExam()">
+      <span></span>
+      <span></span>
+       <span></span>
+      <span></span>
+      บันทึก
+    </a>
+
+  </form>
+</div> 

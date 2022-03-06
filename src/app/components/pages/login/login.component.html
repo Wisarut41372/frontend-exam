@@ -1,0 +1,31 @@
+
+<div class="login-box" *ngIf="!isLoggedIn">
+    <h2>Login</h2>
+    <div class="row">
+        <div class="col text-center" style="color:red">
+            {{errMessage}}
+        </div>
+    </div>
+    <form [formGroup]="loginForm">
+      <div class="user-box">
+        <input type="text" name="" required="" formControlName="email">
+        <label>Email</label>
+      </div>
+      <div class="user-box">
+        <input type="password" name="" required="" formControlName="password">
+        <label>Password</label>
+      </div>
+     
+      <a (click)="doLogin()">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Submit
+      </a>
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+     <label> <a routerLink="/register">register</a></label>
+  
+    
+    </form>
+  </div> <app-main *ngIf="isLoggedIn"></app-main>

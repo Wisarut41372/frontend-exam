@@ -1,0 +1,62 @@
+
+<div class="login-box" *ngIf="!isregister">
+    <h2>Register</h2>
+    <div class="row">
+        <div class="col text-center" style="color:red">
+            {{errMessage}}
+        </div>
+    </div>
+    <form [formGroup]="registerForm">
+
+      <div class="user-box">
+        <input type="text" name="" required="" formControlName="username">
+        <label>username</label>
+      </div>
+
+      <div class="user-box">
+        <input type="text" name="" required="" formControlName="name">
+        <label>name</label>
+      </div>
+
+      <div class="user-box">
+        <input type="text" name="" required="" formControlName="lastname">
+        <label>lastname</label>
+      </div>
+
+      <div class="user-box">
+        <input type="text" name="" required="" formControlName="email">
+        <label>email</label>
+      </div>
+
+      <div class="user-box">
+        <input type="password" name="" required="" formControlName="password">
+        <label>password</label>
+      </div>
+      
+      <div class="user-box">
+      <label>status :</label> <br><br>  
+      <select  style="width:100px;" formControlName="status">
+        <option value="student">student</option>
+        <option value="teacher">teacher</option>
+      </select>
+    </div>
+      
+        
+        
+     
+      
+     
+
+      <a (click)="doRegister()" routerLink="/login">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Submit
+      </a>
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     <label> <a routerLink="/login">Login</a></label>
+  
+    
+    </form>
+  </div> <app-main *ngIf="isregister"></app-main>
